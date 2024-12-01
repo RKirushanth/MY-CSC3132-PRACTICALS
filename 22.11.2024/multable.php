@@ -93,4 +93,6 @@ function showTable1($work_hours,$connect,$colnames){
     }
     echo "<br>";
     showTable1("members",$connect,["work_hours","work_start_time"]);
+    echo "<br>";
+    showTable1("student",$connect,["name","gender"]);
 ?>
