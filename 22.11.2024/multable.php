@@ -3,9 +3,9 @@
 require_once 'dbconf.php';
 
 
-function showTable($tname,$connect){
+function showTable($work_hours,$connect){
 try {
-   $sql = "SELECT * FROM $tname";
+   $sql = "SELECT * FROM $work_hours";
     
       
   $result = mysqli_query($connect, $sql);
@@ -45,10 +45,10 @@ catch (Exception $e) {
 }
 showTable("student",$connect);
 echo "<br>";
-showTable("teacher",$connect);
+showTable("members",$connect);
 
 
-function showTable1($tname,$connect,$colnames){
+function showTable1($work_hours,$connect,$colnames){
     try {
        $sql = "SELECT ";
         for($i=0; $i<sizeof($colnames)-1; $i++){
@@ -92,5 +92,5 @@ function showTable1($tname,$connect,$colnames){
     }
     }
     echo "<br>";
-    showTable1("teacher",$connect,["name","subject"]);
+    showTable1("members",$connect,["work_hours","work_start_time"]);
 ?>
