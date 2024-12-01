@@ -54,7 +54,7 @@ function showTable1($work_hours,$connect,$colnames){
         for($i=0; $i<sizeof($colnames)-1; $i++){
             $sql.=$colnames[$i].",";
         }
-      $sql.=$colnames[sizeof($colnames)-1]." FROM $tname "; 
+      $sql.=$colnames[sizeof($colnames)-1]." FROM $work_hours "; 
 
       $result = mysqli_query($connect, $sql);
      
