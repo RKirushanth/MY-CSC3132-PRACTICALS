@@ -7,7 +7,7 @@ require_once 'dbconf.php';
  function student($connect){
             try{
             
-                $sql = "SELECT id, name FROM student";
+                $sql = "SELECT id,age FROM student";
             
             
                 $result = mysqli_query($connect,$sql);
